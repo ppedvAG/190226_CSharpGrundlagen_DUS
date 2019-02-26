@@ -232,6 +232,8 @@ namespace HalloWelt
             //} 
             #endregion
 
+            var zahlen = Enumerable.Repeat(42, 500).ToArray();
+
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }
