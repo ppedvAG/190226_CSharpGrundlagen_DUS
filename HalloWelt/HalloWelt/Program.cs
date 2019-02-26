@@ -232,7 +232,99 @@ namespace HalloWelt
             //} 
             #endregion
 
-            var zahlen = Enumerable.Repeat(42, 500).ToArray();
+            // var zahlen = Enumerable.Repeat(42, 500).ToArray();
+
+            #region Formatierte Ausgabe
+            //int zahl1 = 5;
+            //int zahl2 = 10;
+            //int erg = zahl1 + zahl2;
+
+            //Console.OutputEncoding = Encoding.Unicode;
+
+            //Console.WriteLine("Die Summe von " + zahl1 + " und " + zahl2 + " ist " + erg);
+            //// String.Format();
+            //Console.WriteLine("Die Summe von {0} und {1} ist {2:C4}",zahl1,zahl2,erg);
+            //// String-Interpolation
+            //Console.WriteLine($"Die Summe von {zahl1} und {zahl2} ist {zahl1 + zahl2}");
+
+            //// Lange Zeichenketten optimiert zusammensetzen
+            //StringBuilder sb = new StringBuilder(); // StringBuilder erstellen
+            //sb.Append("Die Summe von");
+            //sb.Append(zahl1);
+            //// ...
+            //Console.WriteLine(sb.ToString()); 
+            #endregion
+
+            #region Vergleich: Wertetypen und Referenztypen
+            //int zahl1 = 5;
+            //int zahl2 = 5;
+
+            //if(zahl1 == zahl2)
+            //    Console.WriteLine("Wertevergleich: gleich");
+            //else
+            //    Console.WriteLine("Wertevergleich: ungleich");
+
+            //int zahl3 = zahl2; // Wertekopie
+            //if (zahl3 == zahl2)
+            //    Console.WriteLine("Wertekopie: gleich");
+            //else
+            //    Console.WriteLine("Wertekopie: ungleich");
+
+            //object objekt1 = 10;
+            //object objekt2 = 10;
+
+            //if(objekt1 == objekt2)
+            //    Console.WriteLine("Referenzvergleich: gleich");
+            //else
+            //    Console.WriteLine("Referenzvergleich: ungleich");
+
+            //object objekt3 = objekt2; // Referenzkopie
+
+            //if (objekt3 == objekt2)
+            //    Console.WriteLine("Referenzvergleich nach kopie: gleich");
+            //else
+            //    Console.WriteLine("Referenzvergleich nach kopie: ungleich");
+
+            //// Wertevergleich bei Referenztypen
+            //if (objekt1.Equals(objekt2))
+            //    Console.WriteLine("Wertevergleich bei Referenztypen: gleich");
+            //else
+            //    Console.WriteLine("Wertevergleich bei Referenztypen: ungleich"); 
+            #endregion
+
+            // Exceptions
+
+            Console.WriteLine("Bitte geben Sie eine Zahl ein:");
+            string eingabe = Console.ReadLine();
+            // try + TAB + TAB
+            // Umschließen mit:
+            // STRG + K + S  -> try
+            
+            int zahl = 0;
+            try
+            {
+                zahl = Convert.ToInt32(eingabe);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Bitte geben Sie nur ganze Zahlen ein !");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Ihre Zahl war zu groß oder zu klein");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Unbekannter Fehler: {ex.Message}");
+                // throw; // Fehler weiterwerfen, zb an ein höheres Try/Catch
+            }
+            finally
+            {
+                // Wird IMMER ausgeführt, egal ob es eine Exception gibt oder nicht
+                Console.WriteLine("ich werde IMMER ausgeführt :) ");
+            }
+
+            Console.WriteLine($"Das doppelte deiner Eingabe ist: {zahl * 2}");
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
