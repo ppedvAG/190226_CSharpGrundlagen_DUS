@@ -88,6 +88,79 @@ namespace HalloWelt
             //Console.WriteLine(o.GetType()); 
             #endregion
 
+            #region Verzweigung
+            //int zahl1 = 5;
+            //int zahl2 = 10;
+
+            //if(zahl1 > zahl2)
+            //{
+            //    Console.WriteLine("größer");
+            //}
+            //else if(zahl1 == zahl2)
+            //{
+            //    Console.WriteLine("gleich");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("kleiner");
+            //}
+
+            //// if( (zahl1 > 0) && (zahl2 < 100)) 
+            #endregion
+
+            #region Switch
+            //int zahl1 = 5;
+
+            //switch (zahl1)
+            //{
+            //    case 1:
+            //        Console.WriteLine("Eins");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("Zwei");
+            //        break;
+            //    case 3:
+            //    case 4:
+            //    case 5:
+            //        Console.WriteLine("Drei, Vier oder Fünf");
+            //        break;
+            //    case 10:
+            //        Console.WriteLine("Zehn");
+            //        goto case 2;
+            //    default:
+            //        Console.WriteLine("irgendwas anderes ...");
+            //        break;
+            //} 
+            #endregion
+
+            #region Operatoren
+            //// Arithmetische Operatoren
+            //// +,-,*,/, % (mod)
+            //// +=, -= ...
+            //// ++, --
+
+            //// Bit-Operatoren
+            //// &, | , ^, ~ (invert), <<, >>
+
+            //int zahl1 = 5;
+            //int erg;
+            //erg = zahl1++; // Postincrement
+
+            //Console.WriteLine(zahl1);
+            //Console.WriteLine(erg);
+            //zahl1 = 5;
+
+            //erg = ++zahl1; // Preincrement
+            //Console.WriteLine(zahl1);
+            //Console.WriteLine(erg);
+
+            //// Scherzfrage
+            ////int meineZahl = 5;
+
+            ////int ergebnis = meineZahl++ + ++meineZahl;
+            ////Console.WriteLine(ergebnis); 
+            #endregion
+
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }
