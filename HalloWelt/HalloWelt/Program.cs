@@ -161,6 +161,77 @@ namespace HalloWelt
             ////Console.WriteLine(ergebnis); 
             #endregion
 
+            #region Schleifen
+            //// Zählergesteuert
+            //// initialisierung;bedingung;aktualisierung
+            //// for(int i = 0; i<10 ;i++)
+            //// {
+            ////     Console.WriteLine(i);
+            //// }
+            //// for + TAB + TAB
+            //// forr + TAB + TAB -> Rückwärts-Variante
+
+            //// Bedingungsgesteuert
+
+            ////int zahl1 = 2000;
+            ////// Kopfgesteuert
+            ////while (zahl1 < 100)
+            ////{
+            ////    Console.WriteLine(++zahl1);
+            ////}
+
+            //////Fußgesteuert
+            ////do
+            ////{
+            ////    Console.WriteLine(zahl1--);
+            ////} while (zahl1 > 0);
+
+            //// Schleifensteuerung
+            //// break; --> Schleife beenden
+            //// continue; --> gehe zum nächsten durchgang 
+            #endregion
+
+            #region Arrays
+            //int[] zahlen = new int[10]; // 0,1,2,3...9 => 10 Anzahl
+            //zahlen[0] = 12;
+            //zahlen[1] = 5;
+            //Console.WriteLine(zahlen[0]);
+
+            //// Array-Initialisierer
+
+            //int[] zahlen2 = new int[] { 9, 12, 4, 7 };
+            //int[] zahlen3 = { 9, 12, 4, 7 };
+
+            //// Mehrdimensional
+            //int[,] schachbrett = new int[8, 8];
+            //schachbrett[0, 0] = 12;
+            //schachbrett[0, 1] = 9;
+
+            //// Jagged-Array
+            //int[][] jaggedArray = new int[5][];
+            //jaggedArray[0][10] 
+
+            //object[] alles = new object[2];
+            //alles[0] = 12;
+            //alles[1] = "Hallo Welt";
+
+            //int zahl1 = (int)alles[0];
+            #endregion
+
+            #region Foreach
+            //int[] meineZahlen = { 12, 3, 7, 3, 21, 4, 6, 7, 99 };
+
+            //for (int i = 0; i < meineZahlen.Length; i++)
+            //{
+            //    Console.WriteLine(meineZahlen[i]);
+            //}
+
+            //foreach (int item in meineZahlen)
+            //{
+            //    Console.WriteLine(item * 2);
+            //} 
+            #endregion
+
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }
