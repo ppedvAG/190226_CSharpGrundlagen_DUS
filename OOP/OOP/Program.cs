@@ -27,12 +27,25 @@ namespace OOP
             //p1.Kontostand = -2000000m; 
             #endregion
 
-            Person p1 = new Person();
-            p1.AlterSetzen(12);
-            p1.AlterSetzen(55);
-            p1.AlterSetzen(255);
+            #region Variante "Java"
+            //Person p1 = new Person();
+            //p1.AlterSetzen(12);
+            //p1.AlterSetzen(55);
+            //p1.AlterSetzen(255);
 
-            Console.WriteLine(p1.AlterAuslesen());
+            //Console.WriteLine(p1.AlterAuslesen()); 
+            #endregion
+
+            Person p1 = new Person();
+            p1.Geburtstag();
+            p1.Geburtstag();
+            p1.Geburtstag();
+            p1.Geburtstag();
+
+            p1.Vorname = "Tom";
+            p1.Nachname = "Ate";
+
+            Console.WriteLine(p1.Alter);
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
