@@ -12,6 +12,8 @@ namespace OOP
     // Feld:            Variable in einer Klasse
     // Methode:         Funktionalität in der Klasse (Subprozedur oder Funktion)
     // Property:        Steuert den Lese+Schreibzugriff auf ein Feld
+    // Konstruktor:     Wird beim Erstellen eines Objektes aufgerufen
+    // Destruktor:      Wird beim Löschen des Objektes aufgerufen
 
     // Gültigkeitsspezifizierer:
     // public:              -> Zugriff von überall aus möglich ist
@@ -115,5 +117,32 @@ namespace OOP
             }
         }
 
+        // Konstruktor:
+        // Gültigkeit NameDerKlasse()
+        // ctor + TAB + TAB
+        //public Person(string Vorname, string Nachname)
+        //{
+        //    this.Vorname = Vorname;
+        //    this.Nachname = Nachname;
+        //}
+
+        // QuickActions and Refactoring -> Generate Constructor ->
+        public Person(decimal kontostand, string vorname, string nachname)
+        {
+            Kontostand = kontostand;
+            Vorname = vorname;
+            Nachname = nachname;
+        }
+
+        // Mini-Übung: Erstellts einen Konstruktor für euer Fahrzeug
+        // Das Fahrzeug braucht immer einen Fahrer und einen kilometerstand
+
+        // Destruktor:
+        // Wird immer aufgerufen, wenn der GC das Objekt aus dem Heap entfernt
+        // Idealer Ort um Drittressourcen (DB-Connection) wieder freizugeben
+        ~Person()
+        {
+            Console.WriteLine("Ich werde gelöscht :( ");
+        }
     }
 }

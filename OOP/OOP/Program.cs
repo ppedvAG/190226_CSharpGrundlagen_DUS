@@ -36,16 +36,23 @@ namespace OOP
             //Console.WriteLine(p1.AlterAuslesen()); 
             #endregion
 
-            Person p1 = new Person();
-            p1.Geburtstag();
-            p1.Geburtstag();
-            p1.Geburtstag();
-            p1.Geburtstag();
+            #region Properties
+            //Person p1 = new Person();
+            //p1.Geburtstag();
+            //p1.Geburtstag();
+            //p1.Geburtstag();
+            //p1.Geburtstag();
 
-            p1.Vorname = "Tom";
-            p1.Nachname = "Ate";
+            //p1.Vorname = "Tom";
+            //p1.Nachname = "Ate"; 
+            //Console.WriteLine(p1.Alter);
+            #endregion
 
-            Console.WriteLine(p1.Alter);
+            Person p1 = new Person(500,"Max", "Mustermann"); // Standard-Konstruktor
+
+            p1 = null;
+            // Garbage Collector direkt ansteuern:
+            // GC.Collect
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
