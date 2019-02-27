@@ -48,11 +48,23 @@ namespace OOP
             //Console.WriteLine(p1.Alter);
             #endregion
 
-            Person p1 = new Person(500,"Max", "Mustermann"); // Standard-Konstruktor
+            #region Konstruktor
+            //Person p1 = new Person(500,"Max", "Mustermann"); // Standard-Konstruktor
 
-            p1 = null;
-            // Garbage Collector direkt ansteuern:
-            // GC.Collect
+            //p1 = null;
+            //// Garbage Collector direkt ansteuern:
+            //// GC.Collect 
+            #endregion
+
+            #region Überladen
+
+            //Taschenrechner t1 = new Taschenrechner();
+            //int erg  = t1.Add(12, 5);
+            //int erg2  = t1.Add(12, 5, 8); 
+            #endregion
+
+
+
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
