@@ -13,7 +13,8 @@ namespace OOP
             Farbe = farbe;
         }
         public string Farbe { get; set; }
-        public void Zeichnen()
+
+        public virtual void Zeichnen() // virtual macht die Methode überschreibbar mit override
         {
             Console.WriteLine($"Eine Grafik mit der Farbe {Farbe} wird gezeichnet");
         }

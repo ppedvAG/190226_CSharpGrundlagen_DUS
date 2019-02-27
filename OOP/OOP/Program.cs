@@ -63,9 +63,51 @@ namespace OOP
             //int erg2  = t1.Add(12, 5, 8); 
             #endregion
 
+            Grafik g1 = new Grafik("Rot");
+            Kreis k1 = new Kreis("Gelb", 20);
+            Rechteck r1 = new Rechteck("Grün", 5, 12);
 
-            Mitarbeiter m = new Mitarbeiter();
-            
+            g1.Zeichnen();
+            k1.Zeichnen();
+            r1.Zeichnen();
+
+            // Polymorphie -> Vielgestaltigkeit
+            // "Ein Objekt der Subklasse(Kreis, etc) kann wie ein Objekt der Basisklasse (Grafik) verwendet werden"
+
+            Console.WriteLine("----------------------- Überschreiben -----------------------");
+
+            Grafik g2 = new Kreis("Orange", 40);
+            g2.Zeichnen();
+
+            Kreis k2 = (Kreis)g2; // wir wissen, dass da ein Kreis dahinter liegt
+            Console.WriteLine(k2.Radius);
+
+            Console.WriteLine("----------------------- Verstecken -----------------------");
+            Grafik g3 = new Rechteck("Violett", 50, 30);
+            g3.Zeichnen();
+
+            Console.WriteLine("----------------------- Anwendungsfall -----------------------");
+
+            Grafik[] alleGrafiken = new Grafik[4];
+            alleGrafiken[0] = g1; // Grafik
+            alleGrafiken[1] = k1; // Kreis
+            alleGrafiken[2] = r1; // Rechteck
+            alleGrafiken[3] = k2; // Kreis
+
+            foreach (Grafik g in alleGrafiken)
+            {
+                // Techniken für die Frage "Was bin ich nun wirklich ?"
+                // 1) Console.WriteLine(g.GetType());
+                // 2) is
+                if(g is Rechteck r)// C#7 -> wenn g ein rechteck ist, konvertiere es zu "r"
+                { 
+                    //Rechteck r = (Rechteck)g; // mit der Variante oben spart man sich diese Zeile ;)
+                    Console.WriteLine("Ich bin in wirklichkeit ein Rechteck:");
+                }
+                g.Zeichnen();
+            }
+
+            // DRY - Dont repeat yourself
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
