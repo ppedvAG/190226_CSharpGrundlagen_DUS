@@ -127,12 +127,12 @@ namespace OOP
         //}
 
         // QuickActions and Refactoring -> Generate Constructor ->
-        public Person(decimal kontostand, string vorname, string nachname)
-        {
-            Kontostand = kontostand;
-            Vorname = vorname;
-            Nachname = nachname;
-        }
+        //public Person(decimal kontostand, string vorname, string nachname)
+        //{
+        //    Kontostand = kontostand;
+        //    Vorname = vorname;
+        //    Nachname = nachname;
+        //}
 
         // Mini-Übung: Erstellts einen Konstruktor für euer Fahrzeug
         // Das Fahrzeug braucht immer einen Fahrer und einen kilometerstand
@@ -143,6 +143,26 @@ namespace OOP
         ~Person()
         {
             Console.WriteLine("Ich werde gelöscht :( ");
+        }
+
+        //public Person()
+        //{
+        //    Vorname = "Tom";
+        //    Nachname = "Ate";
+        //    Alter = 10;
+        //    Kontostand = 100;
+        //}
+
+        public Person(string vorname, string nachname)
+        {
+            Vorname = vorname;
+            Nachname = nachname;
+        }
+        public Person(string vorname, string nachname,decimal kontostand)
+        {
+            Vorname = vorname;
+            Nachname = nachname;
+            Kontostand = kontostand;
         }
     }
 }

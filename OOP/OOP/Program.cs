@@ -64,7 +64,8 @@ namespace OOP
             #endregion
 
 
-
+            Mitarbeiter m = new Mitarbeiter();
+            
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
