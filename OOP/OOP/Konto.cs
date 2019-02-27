@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace OOP
 {
+    // sealed   -> Klasse ist versiegelt und kann nicht mehr ihre Member weitervererben
+    // sealed class Konto
     // Abstract -> "Vorlagenklasse"
     abstract class Konto
     {
-        public decimal Kontostand { get; set; } // kann auch abstract sein
+        public decimal Kontostand { get; protected set; } // kann auch abstract sein
 
         public virtual void Einzahlen(decimal betrag)
         {
@@ -24,11 +26,12 @@ namespace OOP
         public override void Abheben(decimal betrag)
         {
             // Abheben: Kontostand darf nicht unter 0 
+            Kontostand -= betrag;
             throw new NotImplementedException();
         }
     }
 
-    class Girokonto : Konto
+    partial class Girokonto : Konto
     {
         public override void Abheben(decimal betrag)
         {

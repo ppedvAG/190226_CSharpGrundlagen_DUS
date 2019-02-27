@@ -19,6 +19,10 @@ namespace OOP
     // public:              -> Zugriff von überall aus möglich ist
     // private:             -> Zugriff ist nur von innerhalb der eigenen Klasse aus möglich
     //   private ist der Standardfall für Felder (Variablen)
+    // protected:           -> Zugriff nur von der eigenen Klasse + alle Klassen die davon erben möglich
+    // internal:            -> Zugriff innerhalb der Assembly wie public, ausserhalb wie private
+    // protected internal:  -> kombi aus internal + alle die davon erben (in anderen Assemblies)
+    // private protected:   -> Protected gilt nur in meiner eigenen Assembly
 
     class Person
     {

@@ -118,8 +118,31 @@ namespace OOP
             //Konto k1 = new Konto(); // darf nicht verwendet werden 
             #endregion
 
+            #region Statische Klasse
+            //SpezialTaschenrechner t = new SpezialTaschenrechner();
+            //int erg = t.Add(12, 4);
+
+            //SpezialTaschenrechner 
+            #endregion
+
+            #region Partielle Klasse
+            //Girokonto g = new Girokonto();
+            #endregion
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
+        }
+    }
+
+    partial class Girokonto
+    {
+        public void Demo()
+        {
+
+        }
+
+        public void MachWas()
+        {
+
         }
     }
 }
