@@ -128,6 +128,39 @@ namespace OOP
             #region Partielle Klasse
             //Girokonto g = new Girokonto();
             #endregion
+
+            #region params
+            //int[] zahlen = { 12, 3, 5 };
+
+            //var erg = Parameter.Add(6,88,4,2,4,99,12345);
+            //var erg2 = Parameter.Add(zahlen);
+            //Console.WriteLine(erg); 
+            #endregion
+
+            //int i = 5;
+            //Parameter.MachEtwas(i); // Übergabe per Wert (Kopie)
+            //Console.WriteLine(i);
+
+            //Person p = new Person("Tom","Ate",12345);
+            //Parameter.MachEtwas(p); // Übergabe per Wert (Kopie)
+            //Console.WriteLine(p.Vorname);
+
+            //int i = 5;
+            //Parameter.MachEtwasReferenz(ref i); // Übergabe per Referenz
+            //Console.WriteLine(i);
+
+            //Person p = new Person("Tom", "Ate", 12345);
+            //Parameter.MachEtwasReferenz(ref p); // Übergabe per Referenz
+            //Console.WriteLine(p.Vorname);
+
+            //Parameter.MachEtwasReadonlyReferenz(i);
+
+            int erg = 0;
+            bool erfolg = Parameter.KannIchKonvertierenFragezeichen("123", out erg);
+
+            Parameter.MachEtwasOptional("meinem Text");
+            Parameter.MachEtwasOptional();
+
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }
