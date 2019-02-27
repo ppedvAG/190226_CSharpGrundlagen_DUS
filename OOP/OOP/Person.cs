@@ -82,8 +82,38 @@ namespace OOP
 
         // Autoproperty:
         // prop + TAB + TAB
+
         public string Vorname { get; set; }
         public string Nachname { get; set; }
+
+
+        // Übung:
+        // Klasse "Fahrzeug"
+        /* int Geschwindigkeit (lesen und schreiben) -> Schreiben: 0 - 250
+         * int Kilometerstand (lesen erlaubt, schreiben private)
+         * string Fahrer (autoprop)
+         * 
+         * Methode:
+         * Fahren(int Stunden) -> Aktuelle Geschwindigkeit wird X stunden gefahren -> Kilometerstand erhöht sich
+         * 
+         * Main():
+         * 1 Fahrzeug erstellen, kilometerstand ausgeben,
+         * 100 kmh als geschwindigkeit setzen, 5 stunden fahren
+         * kilometerstand ausgeben
+         */
+
+
+        // Readonly-Property:
+        private string vn;
+        private string nn;
+
+        public string GanzerName
+        {
+            get
+            {
+                return $"{vn} {nn}";
+            }
+        }
 
     }
 }
