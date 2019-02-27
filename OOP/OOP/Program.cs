@@ -129,37 +129,83 @@ namespace OOP
             //Girokonto g = new Girokonto();
             #endregion
 
-            #region params
+            #region Parameter
+
             //int[] zahlen = { 12, 3, 5 };
 
             //var erg = Parameter.Add(6,88,4,2,4,99,12345);
             //var erg2 = Parameter.Add(zahlen);
             //Console.WriteLine(erg); 
+            ////int i = 5;
+            ////Parameter.MachEtwas(i); // Übergabe per Wert (Kopie)
+            ////Console.WriteLine(i);
+
+            ////Person p = new Person("Tom","Ate",12345);
+            ////Parameter.MachEtwas(p); // Übergabe per Wert (Kopie)
+            ////Console.WriteLine(p.Vorname);
+
+            ////int i = 5;
+            ////Parameter.MachEtwasReferenz(ref i); // Übergabe per Referenz
+            ////Console.WriteLine(i);
+
+            ////Person p = new Person("Tom", "Ate", 12345);
+            ////Parameter.MachEtwasReferenz(ref p); // Übergabe per Referenz
+            ////Console.WriteLine(p.Vorname);
+
+            ////Parameter.MachEtwasReadonlyReferenz(i);
+
+            //int erg = 0;
+            //bool erfolg = Parameter.KannIchKonvertierenFragezeichen("123", out erg);
+
+            //Parameter.MachEtwasOptional("meinem Text");
+            //Parameter.MachEtwasOptional(); 
             #endregion
 
-            //int i = 5;
-            //Parameter.MachEtwas(i); // Übergabe per Wert (Kopie)
-            //Console.WriteLine(i);
+            //Händler max = new Händler();
+            //max.Anzahl = 5000;
+            //max.Produkt = new Obst();
+            //max.Produkt.Name = "Apfel";
+            //max.Produkt.Herkunft = "Steiermark";
+            //max.Produkt.Preis = 0.80m;
+            //max.Produkt.Kcal = 80;
 
-            //Person p = new Person("Tom","Ate",12345);
-            //Parameter.MachEtwas(p); // Übergabe per Wert (Kopie)
-            //Console.WriteLine(p.Vorname);
+            Händler martha = new Händler();
+            martha.Anzahl = 100;
+            Obst o1 = new Obst();
+            o1.Name = "Banane";
+            o1.Herkunft = "Brasilien";
+            o1.Preis = 1.20m;
+            o1.Kcal = 120;
+            martha.Produkt = o1;
 
-            //int i = 5;
-            //Parameter.MachEtwasReferenz(ref i); // Übergabe per Referenz
-            //Console.WriteLine(i);
+            Händler klara = new Händler();
+            klara.Anzahl = 200;
+            // Objektinitialisierer
+            klara.Produkt = new Obst()
+            {
+                Name = "Orangen",
+                Herkunft = "Spanien",
+                Preis = 0.50m,
+                Kcal = 90
+            };
 
-            //Person p = new Person("Tom", "Ate", 12345);
-            //Parameter.MachEtwasReferenz(ref p); // Übergabe per Referenz
-            //Console.WriteLine(p.Vorname);
+            Händler hannes = new Händler
+            {
+                Anzahl = 500,
+                Produkt = new Gemüse
+                {
+                    Name = "Irische Kartoffel",
+                    Preis = 12.99m
+                }
+            };
 
-            //Parameter.MachEtwasReadonlyReferenz(i);
+            if(hannes.Produkt is Gemüse g)
+            {
+                g.Bitter = true;
+            }
 
-            int erg = 0;
-            bool erfolg = Parameter.KannIchKonvertierenFragezeichen("123", out erg);
-
-            Parameter.MachEtwasOptional("meinem Text");
-            Parameter.MachEtwasOptional();
+            Gemüse g1 = (Gemüse)hannes.Produkt;
+            Console.WriteLine(g1);
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();

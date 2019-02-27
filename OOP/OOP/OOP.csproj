@@ -45,10 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gemüse.cs" />
     <Compile Include="Grafik.cs" />
+    <Compile Include="IProdukt.cs" />
     <Compile Include="Konto.cs" />
     <Compile Include="Kreis.cs" />
     <Compile Include="Mitarbeiter.cs" />
+    <Compile Include="Obst.cs" />
+    <Compile Include="ObstHändler.cs" />
     <Compile Include="Parameter.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
