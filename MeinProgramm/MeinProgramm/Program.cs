@@ -15,7 +15,6 @@ namespace MeinProgramm
 #if DEBUG
             Console.WriteLine("Ich bin im DEBUG-Modus");
 #endif
-
             var erg = Taschenrechner.Add(12, 3);
             Console.WriteLine(erg);
 

@@ -1,0 +1,7 @@
+Links:
+http://visualstudioshortcuts.com/2017/
+https://github.com/ppedvAG/190226_CSharpGrundlagen_DUS
+https://regexr.com/
+https://referencesource.microsoft.com/
+https://stackoverflow.com/questions/4134366/math-stats-with-linq
+https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b
